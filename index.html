@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homework 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <link href="assets/images/questiononeaudio.mp3">
+    <link href="assets/images/questiontwoaudio.mp3">
+    <link href="assets/images/questionthreeaudio.mp3">
+    <link href="assets/images/questionfouraudio.mp3">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="assets/javascript/app.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Name that Theme Song!</h1>
+        <p class="lead">Listen to a short clip of a popular TV show's theme song for each question and guess the show!</p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="showGame">Start Game!</a>
+        <p>Time left: <span id="countdown"></span></p>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <h4>Question 1: </h4>
+            <audio id="question1audio" src="assets/images/questiononeaudio.mp3" type="audio/ogg"></audio>    
+            <input type="button" value="Click to play theme!" id="start" />
+        </div>
+        <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" id="q1a">Star Trek</button>
+                <button type="button" class="btn btn-secondary" id="q1b">Scrubs</button>
+                <button type="button" class="btn btn-secondary" id="q1c">Doctor Who</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h4>Question 2:</h4>
+            <audio id="question2audio" src="assets/images/questiontwoaudio.mp3" type="audio/ogg"></audio>    
+            <input type="button" value="Click to play theme!" id="q2start" />
+        </div>
+        <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" id="q2a">Futurama</button>
+                <button type="button" class="btn btn-secondary" id="q2b">The Simpsons</button>
+                <button type="button" class="btn btn-secondary" id="q2c">Dexter's Lab</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h4>Question 3:</h4>
+            <audio id="question3audio" src="assets/images/questionthreeaudio.mp3" type="audio/ogg"></audio>    
+            <input type="button" value="Click to play theme!" id="q3start" />
+        </div>
+        <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" id="q3a">M*A*S*H</button>
+                <button type="button" class="btn btn-secondary" id="q3b">Friends</button>
+                <button type="button" class="btn btn-secondary" id="q3c">Seinfeld</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h4>Question 4:</h4>
+            <audio id="question4audio" src="assets/images/questionfouraudio.mp3" type="audio/ogg"></audio>    
+            <input type="button" value="Click to play theme!" id="q4start" />
+        </div>
+        <div class="row">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary" id="q4a">How I Met Your Mother</button>
+                    <button type="button" class="btn btn-secondary" id="q4b">Scrubs</button>
+                    <button type="button" class="btn btn-secondary" id="q4c">Chapelle Show</button>
+                </div>
+        </div>
+        
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" id="showAnswers">Your Score: <span id="userAnswers"></span></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

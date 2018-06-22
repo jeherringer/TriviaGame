@@ -1,0 +1,29 @@
+.jumbotron {
+    background: lightslategray;
+    text-align: center;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#start, #q2start, #q3start, #q4start {
+    height: 40px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: lightseagreen;
+}
+
+#showAnswers {
+    position: relative;
+    left: 635px;
+    top: 50px;
+}
+
+#showGame {
+    background: lightsteelblue;
+    color: black;
+}
+
+#showAnswers {
+    background: lightsteelblue;
+    color: black;
+}
