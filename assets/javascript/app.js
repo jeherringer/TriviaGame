@@ -1,27 +1,14 @@
-// variables needed:
-
-// var answer1,2,3,4 = 
-// var count
-
-//functions needed:
-
-// timer function
-// game start function (that shows the html holding the questions)
-// win function
-// lose function
-// reset function
-// on click functions for buttons
-
+// All my variables
 let count=32;
-let answer1 = "";
-let answer2 = "";
-let answer3 = "";
-let answer4 = "";
+let answer1 = false;
+let answer2 = false;
+let answer3 = false;
+let answer4 = false;
 let userCorrect = 0;
 let userWrong = 0;
-var timerRunning=false;
-let counter=setInterval(timer, 1000);
+var counter = setInterval(timer, 1000);
 
+// Function that checks the answers of each question and adds to wrong/correct counters
 function answerCheck () {
    if (answer1 === true) {
        userCorrect++;
@@ -43,9 +30,13 @@ function answerCheck () {
     } else if (answer4 === false) {
         userWrong++;
     }
-    $("#userAnswers").text(`You got ${userCorrect} answers correct and ${userWrong} answers wrong!`);
+    alert(`You got ${userCorrect} answers correct and ${userWrong} answers wrong!`);
+    $("#timeLeft").text("Game over!");
+    $("#countdown").hide();
+
 }
 
+// Function to setup the timer
 function timer() {
     count=count-1
     if (count == 0) {
@@ -53,7 +44,6 @@ function timer() {
         $("#question2audio").trigger("pause");
         $("#question3audio").trigger("pause");
         $("#question4audio").trigger("pause");
-        answerCheck();
     }
     if (count <= 0) {
         clearInterval(counter);
@@ -67,18 +57,15 @@ function timer() {
   $("#countdown").text(count);
 }
 
-function startGame() {
-        setInterval(timer, 1000);
-        timer();
-}
-
+// What actually makes everything work in the game
 $(document).ready(function () {
-    $(".container").hide();
+    $(".container").hide(); // Makes sure everything is hidden except start game button at the start
     
 
-    $("#showGame").click(function() {
+    $("#showGame").click(function() { // will show everything on the HTML and run startGame function to get timer going
         $(".container").show();
-        startGame();
+        setInterval(timer, 1000);
+        timer();
     });
 
 // Question 1 click functions
@@ -172,15 +159,8 @@ $(document).ready(function () {
         $("#q4a").removeClass("active");
         $("#q4b").removeClass("active");
     })
-
-    $("#showAnswers").on("click", function() {
-        $("#question1audio").trigger("pause");
-        $("#question2audio").trigger("pause");
-        $("#question3audio").trigger("pause");
-        $("#question4audio").trigger("pause");
-        answerCheck();
-    })
     
+    // Functions to play audio on click and pause all other audio
     $("#start").click(function() {
         $("#question1audio").get(0).play();
         $("#question2audio").trigger("pause");
@@ -209,10 +189,17 @@ $(document).ready(function () {
         $("#question4audio").get(0).play();
     })
 
-
-
-
-    
+    // function that will pause all playing audio and check the user's answers
+    $("#showAnswers").on("click", function() {
+        $("#question1audio").trigger("pause");
+        $("#question2audio").trigger("pause");
+        $("#question3audio").trigger("pause");
+        $("#question4audio").trigger("pause");
+        answerCheck();
+        userCorrect=0;
+        userWrong=0;
+        startGame();
+    })
 })
    
 

@@ -3,6 +3,7 @@
     text-align: center;
     height: 200px;
     margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #start, #q2start, #q3start, #q4start {
@@ -10,12 +11,6 @@
     margin-left: 10px;
     margin-bottom: 10px;
     background: lightseagreen;
-}
-
-#showAnswers {
-    position: relative;
-    left: 635px;
-    top: 50px;
 }
 
 #showGame {
@@ -26,4 +21,13 @@
 #showAnswers {
     background: lightsteelblue;
     color: black;
+    position: relative;
+    left: 230px;
+    top: 40px;
+}
+
+.container {
+    position: relative;
+    top: 60px;
+    font-family: 'Raleway', sans-serif;
 }
